@@ -67,8 +67,6 @@ body{
     align-items: center;
    
 }
-
-
 @media(max-width:768px){
     .nav-bar{
         flex-direction: column;
