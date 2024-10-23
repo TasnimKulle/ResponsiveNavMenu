@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav-bar{
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.brand-title{
+    font-size: 1.5em;
+    line-height: 60px;
+}
+.navbar-link{
+    height: 100%;
+}
+.navbar-link ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-link li{
+    padding: 0 10px;
+}
+.navbar-link a{
+    color: #ffffff;
+    font-size: 1em;
+    text-decoration: none;
+    line-height: 60px;
+    display: block;
+}
+.navbar-link a:hover{
+    background-color: #444;
+}
+.toggle-button{
+    width: 30px;
+    height:21px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: none;
+   flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius:15px ;
+}
+#home{
+    height:100vh;
+    background-color: navy;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+@media(max-width:768px){
+    .nav-bar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-link{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease-out, opacity 0.5s;
+    }
+   
+    .navbar-link ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-link li{
+        text-align: center;
+    }
+    .navbar-link a{
+        padding: 18px;
+        line-height: 20px;
+    }
+    .nav-bar.active .navbar-link{
+        max-height: 300px;
+        opacity: 1;
+      
+    }
+    .nav-bar.active .toggle-button .bar:nth-child(2){
+        opacity: 0;
+
+    }
+    .nav-bar.active .toggle-button .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .nav-bar.active .toggle-button .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
