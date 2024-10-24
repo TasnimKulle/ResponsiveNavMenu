@@ -45,6 +45,9 @@ body{
 }
 .navbar-link a:hover{
     background-color: #444;
+    margin: 5px 0;
+    padding: 0 15px;
+    border-radius:10px ;
 }
 .toggle-button{
     width: 30px;
@@ -65,7 +68,7 @@ body{
     border-radius:15px ;
 }
 .navbar-link a.active {
-    background-color: hsl(0, 2%, 44%); 
+    background-color: #444;
     color: #fff;
     margin: 5px 0;
     padding: 0 15px;
