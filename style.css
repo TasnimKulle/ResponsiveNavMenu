@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -13,6 +16,9 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .brand-title{
     font-size: 1.5em;
@@ -58,14 +64,50 @@ body{
     background-color: #fff;
     border-radius:15px ;
 }
-#home{
-    height:100vh;
-    background-color: navy;
+.navbar-link a.active {
+    background-color: hsl(0, 2%, 44%); 
     color: #fff;
+    margin: 5px 0;
+    padding: 0 15px;
+    border-radius:10px ;
+   
+}
+
+.sectionTerms{
+    height:100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
    
+}
+#home{
+    background-color: navy;
+    color:#fff;
+}
+#about{
+    background-color: orangered;
+    color: #fff;
+}
+#service{
+    background-color: #62024b;
+    color: #fff;
+}
+#contect{
+    background-color: #7e0202;
+    color: aliceblue;
+}
+#port{
+    background-color: blueviolet;
+    color:whitesmoke;
+}
+#career{
+    background-color: brown;
+    color: white;
+}
+#blog{
+    background-color: #022d00;
+    color: #fff;
 }
 @media(max-width:768px){
     .nav-bar{
